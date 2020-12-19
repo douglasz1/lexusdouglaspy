@@ -47,14 +47,14 @@ def submit():
         comments = request.form['comments']
         # print(customer, dealer, rating, comments)
         if customer == '' or dealer == '':
-            return render_template('index.html', message='Please enter required fields')
+            return render_template('index.html', message='Por favor, insira os campos obrigatórios')
         if db.session.query(Feedback).filter(Feedback.customer == customer).count() == 0:
             data = Feedback(customer, dealer, rating, comments)
             db.session.add(data)
             db.session.commit()
             send_mail(customer, dealer, rating, comments)            
             return render_template('success.html')
-        return render_template('index.html', message='You have already submitted feedback')
+        return render_template('index.html', message='Você já enviou seu feedback')
 
 
 if __name__ == '__main__':

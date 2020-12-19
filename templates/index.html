@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../static/style.css" />
-    <title>Please rate your service</title>
+    <title>Lexus</title>
   </head>
   <body>
     <div class="container">
@@ -15,7 +15,7 @@
       {% endif %}
       <form action="/submit" method="POST">
         <div class="form-group">
-          <h3>Customer Name</h3>
+          <h3>Nome do Cliente</h3>
           <input
             type="text"
             name="customer"
@@ -23,9 +23,9 @@
           />
         </div>
         <div class="form-group">
-          <h3>Dealer</h3>
+          <h3>Revendedor</h3>
           <select name="dealer">
-            <option value="">Select Dealer</option>
+            <option value="">Selecione o revendedor</option>
             <option value="Tom Smith">Tom Smith</option>
             <option value="Karen Swanson">Karen Swanson</option>
             <option value="Jim Johnson">Jim Johnson</option>
@@ -46,13 +46,13 @@
           <input type="radio" name="rating" value="10" checked /> 10
         </div>
         <div class="form-group">
-          <h3>Comments about your experience</h3>
+          <h3>Comentários sobre sua experiência</h3>
           <textarea
             name="comments"
             id=""
             cols="30"
             rows="10"
-            placeholder="Tell us what you liked and/or did not like"
+            placeholder="Conte-nos o que você gostou e/ou não gostou"
           ></textarea>
         </div>
         <input type="submit" value="Submit" class="btn" />
